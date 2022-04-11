@@ -39,6 +39,7 @@ int main()
         printf("Deseja adicionar mais numeros? (s/n)\n");
         scanf("%c", &continuar);
         fflush(stdin);
+        printf("\n\n");
 
         cont++;
 
@@ -46,6 +47,5 @@ int main()
 
     printf("\nMaior valor: %d\nMenor valor: %d\n", maior, menor);
     
-
     return 0;
 }
