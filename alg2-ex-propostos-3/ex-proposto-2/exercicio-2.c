@@ -8,7 +8,7 @@ posição. Exemplos: ROMA, MORA, ORAM, AMOR, RAMO, são anagramas entre si.
 #include <stdio.h>
 #include <string.h>
 
-int main()
+void main()
 {
     char palavra_um[40];
     char palavra_dois[40];
@@ -29,24 +29,24 @@ int main()
         {
             for(int j = 0; j < quantidade_palavra_um; j++)
             {
-                if(palavra_um[i] == palavra_dois[j])
+                if(tolower(palavra_um[i]) == tolower(palavra_dois[j]))
                 {
                     cont++;
                     break;
                 }
             }
-            if(quantidade_palavra_um == cont)
-            {
-                printf("\nAs palavras sao anagramas\n");
-            }
-            else{
-                printf("\nAs palavras não são anagramas!\n");
-            }
+        }
+        
+        if(quantidade_palavra_um == cont)
+        {
+            printf("\nAs palavras sao anagramas\n");
+        }
+        else{
+            printf("\nAs palavras não são anagramas!\n");
         }
     }
     else
     {
-        printf("\nquantidade diferente\n");
+        printf("\nQuantidade de letras diferente, impossibilitando a palavra de ser um anagrama.\n");
     }
-
 }
