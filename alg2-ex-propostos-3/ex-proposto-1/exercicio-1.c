@@ -5,7 +5,6 @@ deve determinar o maior e o menor elemento do vetor.
 */
 
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
@@ -23,15 +22,15 @@ int main()
 
         maior = menor = n[0];
         int i = 0;
-        while(i < strlen(n))
+        while(i < cont)
         {
-            if(n[cont] > maior)
+            if(n[i] > maior)
             {
-                maior = n[cont];
+                maior = n[i];
             }
-            if(menor > n[cont]) 
+            if(menor > n[i]) 
             {
-                menor = n[cont];
+                menor = n[i];
             }
             i++;
         }
