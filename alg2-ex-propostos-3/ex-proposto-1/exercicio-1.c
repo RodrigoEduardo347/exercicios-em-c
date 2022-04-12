@@ -11,29 +11,12 @@ int main()
     int n[100000];
     char continuar;
     int cont = 0;
-    int maior;
-    int menor;
-
+    
     do
     {
         printf("Digite um numero: ");
         scanf("%d", &n[cont]);
         fflush(stdin);
-
-        maior = menor = n[0];
-        int i = 0;
-        while(i < cont)
-        {
-            if(n[i] > maior)
-            {
-                maior = n[i];
-            }
-            if(menor > n[i]) 
-            {
-                menor = n[i];
-            }
-            i++;
-        }
 
         printf("Deseja adicionar mais numeros? (s/n)\n");
         scanf("%c", &continuar);
@@ -43,6 +26,23 @@ int main()
         cont++;
 
     } while (continuar != 'n' && continuar != 'N');
+
+    int maior;
+    int menor;
+
+    maior = menor = n[0];
+
+    for(int i =0; i < cont; i++)
+    {
+        if(n[i] > maior)
+        {
+            maior = n[i];
+        }
+        if(menor > n[i]) 
+        {
+            menor = n[i];
+        }
+    }
 
     printf("\nMaior valor: %d\nMenor valor: %d\n", maior, menor);
     
