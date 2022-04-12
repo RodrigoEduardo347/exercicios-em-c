@@ -14,10 +14,10 @@ int main()
     
     do
     {
-        printf("Digite um numero: ");
+        printf("Digite um número: ");
         scanf(" %d", &n[cont]);
 
-        printf("Deseja adicionar mais numeros? (s/n)\n");
+        printf("Deseja adicionar mais números? (s/n)\n");
         scanf(" %c", &continuar);
         printf("\n\n");
 
@@ -30,7 +30,7 @@ int main()
 
     maior = menor = n[0];
 
-    for(int i =0; i < cont; i++)
+    for(int i = 1; i < cont; i++)
     {
         if(n[i] > maior)
         {
