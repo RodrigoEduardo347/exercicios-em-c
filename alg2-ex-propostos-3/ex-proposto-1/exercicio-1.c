@@ -15,12 +15,10 @@ int main()
     do
     {
         printf("Digite um numero: ");
-        scanf("%d", &n[cont]);
-        fflush(stdin);
+        scanf(" %d", &n[cont]);
 
         printf("Deseja adicionar mais numeros? (s/n)\n");
-        scanf("%c", &continuar);
-        fflush(stdin);
+        scanf(" %c", &continuar);
         printf("\n\n");
 
         cont++;
