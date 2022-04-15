@@ -1,32 +1,38 @@
-#include <stdio.h>
-#include <string.h>
+/*
+Exercício 3. Escreva um programa que leia uma palavra do teclado e determine
+se é um palíndromo.
+Observação: Palíndromo é uma palavra, frase ou número que permanece igual
+quando lida de trás para diante
+*/
+
+#include<stdio.h>
+#include<string.h>
 #include <locale.h>
- 
-int main(){
-	setlocale(LC_ALL, "Portuguese");
-	
-	char palavra[30];
+  
+void main()
+{
+   setlocale(LC_ALL, "Portuguese");
+   char palavra[20];
+   char inversa[20];
 
-	printf("Digite uma palavra: ");
-	gets(palavra);
+   printf("Digite uma palavra: ");
+   fgets(palavra, 20, stdin);
+   palavra[ strcspn( palavra, "\n" ) ] = '\0';
+  
+   for(int i = 0; palavra[i]; i++){
+      palavra[i] = tolower(palavra[i]);
+   }
 
-	int i = 0;
-	int cont = strlen(palavra);
-	cont--;
-	int errado = 0;
+   strcpy(inversa, palavra);
+   strrev(inversa);
 
-	while(cont >= i){
-		if(tolower(palavra[i]) != tolower(palavra[cont])){
-			errado++;
-		}
-		i++;
-		cont--;
-	}
+   int comparacao = 0;
+   comparacao = strcmp(palavra, inversa) == 0;
 
-	if(errado == 0){
-		printf("\nA palavra %s é palíndroma!\n", palavra);
-	} else{
-		printf("\nA palavra %s não é palíndroma!\n", palavra);
-	}
-	return 0;
+   if(comparacao){
+      printf("\n%s é um palíndromo\n", palavra);
+   }
+   else{
+      printf("\n%s NÃO é um palíndromo\n", palavra);
+   }
 }

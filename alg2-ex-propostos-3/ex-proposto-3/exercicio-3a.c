@@ -1,3 +1,10 @@
+/*
+Exercício 3. Escreva um programa que leia uma palavra do teclado e determine
+se é um palíndromo.
+Observação: Palíndromo é uma palavra, frase ou número que permanece igual
+quando lida de trás para diante
+*/
+
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
@@ -17,7 +24,7 @@ int main(){
 	int errado = 0;
 
 	while(cont - 1 >= i){
-		if(palavra[i] != palavra[cont]){
+		if(tolower(palavra[i]) != tolower(palavra[cont])){
 			errado++;
 		}
 		i++;
