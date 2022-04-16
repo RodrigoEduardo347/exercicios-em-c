@@ -27,8 +27,11 @@ void main()
         int cont = 0;
         for(int i = 0; i < quantidade_palavra_um; i++)
         {
+            //Verifica se as letras são iguais
             for(int j = 0; j < quantidade_palavra_um; j++)
             {
+                //Verifica as letras uma a uma
+                //Se as letras forem iguais, será acrescentado 1 na variável cont
                 if(tolower(palavra_um[i]) == tolower(palavra_dois[j]))
                 {
                     cont++;
@@ -37,6 +40,8 @@ void main()
             }
         }
         
+        /* Se a quantidade de letras da palavra for igual a quantidade de letras iguais
+        entre elas, então uma será anagrama da outra */
         if(quantidade_palavra_um == cont)
         {
             printf("\nAs palavras sao anagramas\n");
