@@ -19,8 +19,10 @@ int main(){
             break;
         }
 
+        //Não considera números menores que 0
         if(num[i] < 0){
-            continue;
+            printf("\nDigite um número maior que 0!\n");
+            i--;
         }
         i++;
     }
@@ -30,10 +32,17 @@ int main(){
     printf("\n\nDigite o número que deseja pesquisar: ");
     scanf("%d", &pesquisa);
 
+    int cont_negativo = 0;
     for(int k = 0; k < i; k++){
         if(pesquisa == num[k]){
             printf("\nO número está na posição %d\n", k+1);
+        }else{
+            cont_negativo++;
         }
+    }
+
+    if(cont_negativo == i){
+        printf("\nNão conseguimos encontrar o seu número na lista :/\n");
     }
 
     return 0;
