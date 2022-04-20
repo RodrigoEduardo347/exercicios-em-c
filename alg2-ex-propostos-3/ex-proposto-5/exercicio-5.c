@@ -28,24 +28,24 @@ int main(){
     leitura(n, m);
 
     //conta o tamanho de cada char tirando o espaço no buffer e o enter
-    int tamanhoN = strlen(n)-2;
-    int tamanhoM = strlen(m)-2;
+    int tamanhoN = strlen(n)-1;
+    int tamanhoM = strlen(m)-1;
 
     if(tamanhoN > tamanhoM){
         printf("A primeria sequência deve ser menor que a segunda.");
         return 0;
     }
 
-    for(int i=0; i<=tamanhoM; i++){
+    for(int i=0; i<tamanhoM; i++){
             int aparece=0;
 
-        for(int j=0; j<=tamanhoN; j++){
+        for(int j=0; j<tamanhoN; j++){
             if(m[i+j] == n[j]){
                 aparece++;
             }
         }
 
-        if(aparece == tamanhoN+1){
+        if(aparece == tamanhoN){
             vezes++;
         }
     }
