@@ -11,10 +11,10 @@ resultado deve ser 3.
 
 //letura das sequências
 void leitura(char primeirasequencia[], char segundasequencia[]) {
-    printf("Digite a primera sequencia: ");
+    printf("Digite a primera sequência: ");
     fflush(stdin);
     fgets(primeirasequencia,100,stdin);
-    printf("Digite a segunda sequencia: ");
+    printf("Digite a segunda sequência: ");
     fflush(stdin);
     fgets(segundasequencia,100,stdin);
 }
@@ -32,7 +32,7 @@ int main(){
     int tamanhoM = strlen(m)-2;
 
     if(tamanhoN > tamanhoM){
-        printf("a primeria sequencia deve ser menor que a segunda.");
+        printf("A primeria sequência deve ser menor que a segunda.");
         return 0;
     }
 
@@ -50,6 +50,6 @@ int main(){
         }
     }
 
-    printf("\nA primeira sequencia aparece %i vez(es) na segunda sequencia.",vezes);
+    printf("\nA primeira sequência aparece %i vez(es) na segunda.",vezes);
     return 0;
 }
