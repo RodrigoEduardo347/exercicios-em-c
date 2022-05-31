@@ -1,4 +1,3 @@
-//chcp 65001
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
